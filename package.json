@@ -1,0 +1,23 @@
+{
+  "name": "librecam",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm -r build && pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "eslint": "^10.15.0",
+    "typescript-eslint": "^8.73.0"
+  },
+  "packageManager": "pnpm@12.16.1",
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

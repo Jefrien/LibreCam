@@ -1,0 +1,31 @@
+{
+  "name": "@librecam/pppp",
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "description": "UDP PPPP protocol client for compatible cameras",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src",
+    "dev": "tsc -p tsconfig.build.json --watch",
+    "test": "node --import tsx --test src/*.test.ts",
+    "prepack": "pnpm build",
+    "diagnose": "node dist/diagnose.js"
+  }
+}

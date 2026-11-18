@@ -1,0 +1,6 @@
+The PPPP implementation derives from devbis/aiopppp (Apache-2.0).
+See packages/pppp/LICENSE and packages/pppp/NOTICE for redistribution.
+
+inartin/365cam-stream (https://github.com/inartin/365cam-stream) documents
+MIT licensing in its README and is a project reference. If its source
+is incorporated, retain its copyright and MIT permission notice.

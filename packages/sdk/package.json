@@ -1,0 +1,26 @@
+{
+  "name": "@librecam/sdk",
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "description": "TypeScript client for the LibreCam REST API",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src",
+    "dev": "tsc -p tsconfig.build.json --watch"
+  }
+}

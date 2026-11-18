@@ -1,0 +1,6 @@
+LibreCam PPPP for Node.js
+
+This package contains a TypeScript adaptation of protocol code from
+devbis/aiopppp (https://github.com/devbis/aiopppp), licensed under Apache-2.0.
+The adaptation changes the language, UDP transport and application interfaces.
+See LICENSE for the full terms.

@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --color-background: var(--app-bg);
+  --color-foreground: var(--app-fg);
+  --color-panel: var(--app-panel);
+  --color-muted: var(--app-muted);
+  --color-primary: var(--app-primary);
+  --color-primary-foreground: var(--app-primary-fg);
+  --color-border: var(--app-border);
+  --color-accent: var(--app-accent);
+  --color-brand: var(--app-brand);
+  --color-brand-soft: var(--app-brand-soft);
+  --color-success: var(--app-success);
+  --color-warning: var(--app-warning);
+  --color-danger: var(--app-danger);
+}
+
+:root {
+  color-scheme: dark;
+  --app-bg: #0d1018;
+  --app-fg: #ecedf6;
+  --app-panel: #141925;
+  --app-muted: #a1aabd;
+  --app-primary: #9384ff;
+  --app-primary-fg: #100d22;
+  --app-border: #292f42;
+  --app-accent: #22293a;
+  --app-brand: #b1a7ff;
+  --app-brand-soft: #29234c;
+  --app-success: #62dfb5;
+  --app-warning: #f3be71;
+  --app-danger: #f59aa6;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --app-bg: #f5f6fb;
+  --app-fg: #232639;
+  --app-panel: #ffffff;
+  --app-muted: #535d76;
+  --app-primary: #5742d8;
+  --app-primary-fg: #ffffff;
+  --app-border: #dde1ed;
+  --app-accent: #eff0f7;
+  --app-brand: #5140bd;
+  --app-brand-soft: #eae6fc;
+  --app-success: #147855;
+  --app-warning: #875014;
+  --app-danger: #a02545;
+}
+
+@layer base {
+  body {
+    @apply m-0 bg-background font-sans text-sm text-foreground antialiased;
+  }
+  button:not(:disabled) {
+    @apply cursor-pointer;
+  }
+  a,
+  button,
+  input,
+  select {
+    @apply focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-primary;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-xl border border-border bg-panel;
+  }
+  .field {
+    @apply min-h-10 w-full rounded-lg border border-border bg-background px-3 py-2 text-foreground;
+  }
+  .video-stage {
+    @apply relative isolate flex items-center justify-center overflow-hidden rounded-lg bg-[#0a0e18] text-[#a59af1];
+    background-image:
+      linear-gradient(#ffffff06 1px, transparent 1px),
+      linear-gradient(90deg, #ffffff06 1px, transparent 1px),
+      radial-gradient(ellipse at center, #211c3a 0%, transparent 68%);
+    background-size:
+      24px 24px,
+      24px 24px,
+      100% 100%;
+  }
+}
